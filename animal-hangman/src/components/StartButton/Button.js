@@ -18,3 +18,5 @@ export const StyledButton = styled.button`
     color: ${(props) => (props.inverted !== 'outline' ? 'hotpink' : '#FFF')};
   }
 `;
+
+
