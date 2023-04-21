@@ -1,16 +1,18 @@
 import StyledButton from './components/StartButton';
 import './App.css';
-import styled from 'styled-components';
+import { useState } from 'react';
+// import styled from 'styled-components';
 
+//fetching word and console logging on click TestBtn.
 function TestBtn({ onSquareClick }) {
   return (
-    <button className="square" onClick={onSquareClick}>
+    <StyledButton className="square" onClick={onSquareClick}>
       Test Button
-    </button>
+    </StyledButton>
   );
 }
 
-let word;
+let word = 'The Word';
 
 async function handleClick() {
   let response = await fetch('https://www.wordgamedb.com/api/v1/words/random');
@@ -21,12 +23,18 @@ async function handleClick() {
   console.log(word);
 }
 
+//Displaying the word as a prop.
+
+function WordContainer({ value }) {
+  return <h2>{value}</h2>;
+}
+
 function App() {
   return (
     <div className="App">
       <h1> Start the game</h1>
-      <StyledButton inverted="outline">Hover Me</StyledButton>
       <TestBtn onSquareClick={() => handleClick()}></TestBtn>
+      <WordContainer value={word}></WordContainer>
     </div>
   );
 }
