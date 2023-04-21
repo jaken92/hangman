@@ -1,7 +1,7 @@
-import {StyledButton} from './components/StartButton/Button';
+import { StyledButton } from './components/StartButton/Button';
 import Figure from './components/Figure';
 import Podium from './components/Podium';
-import {StyledLetterButton} from './components/Letters'
+import { StyledLetterButton } from './components/Letters';
 import './App.css';
 import { useState } from 'react';
 // import styled from 'styled-components';
@@ -35,13 +35,11 @@ function App() {
   return (
     <div className="App">
       <h1> Start the game</h1>
-      <StyledButton inverted="outline">Hover Me</StyledButton>
       <Podium></Podium>
-     
+
       <TestBtn onSquareClick={() => handleClick()}></TestBtn>
 
       <StyledLetterButton></StyledLetterButton>
-      <TestBtn onSquareClick={() => handleClick()}></TestBtn>
       <WordContainer></WordContainer>
     </div>
   );
