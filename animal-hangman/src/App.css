@@ -1,3 +1,6 @@
+body{
+  background-image: url('background.jpg');
+}
 .App {
   display: flex;
   flex-direction: column;
@@ -7,10 +10,16 @@
   gap: 30px;
 }
 
+.App h1 {
+  margin-top: 20rem;
+  font-size: 40px;
+  color:white;
+}
+
 .LetterContainer{
   display:flex;
   flex-direction: row;
-  
+  margin-bottom: 10rem;
   gap: 10px;
   width: 800px;
   flex-wrap:wrap;

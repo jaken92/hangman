@@ -1,7 +1,7 @@
 import { StyledButton } from './components/StartButton/Button';
 import Figure from './components/Figure';
 import Podium from './components/Podium';
-import { StyledLetterButton } from './components/Letters';
+
 import LetterButton from './components/Letters'
 import './App.css';
 import { useState } from 'react';
@@ -11,12 +11,24 @@ import { useState } from 'react';
 function TestBtn({ onSquareClick }) {
   return (
     <StyledButton className="square" onClick={onSquareClick}>
-      Test Button
+      Start the game
     </StyledButton>
   );
 }
 
 let word = 'The Word';
+
+//button 
+function RedirectButton(props) {
+  const handleClick = () => {
+    const element = document.getElementById(props.divId);
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+  return (
+    <button onClick={handleClick}>Go down on page</button>
+  );
+}
+
 
 async function handleClick() {
   let response = await fetch('https://www.wordgamedb.com/api/v1/words/random');
@@ -35,14 +47,12 @@ function WordContainer() {
 function App() {
   return (
     <div className="App">
-      <h1> Start the game</h1>
+      <h1> HANGED MAN</h1>
+      
+
+      <TestBtn onSquareClick={() => handleClick()}></TestBtn>
+      <RedirectButton divId = "letter-div"></RedirectButton>
       <Podium></Podium>
-
-      <TestBtn onSquareClick={() => handleClick()}></TestBtn>
-
-      <StyledLetterButton></StyledLetterButton>
-     
-      <TestBtn onSquareClick={() => handleClick()}></TestBtn>
       <WordContainer></WordContainer>
       <div className = "LetterContainer">
       <LetterButton buttonText = "A"></LetterButton>
@@ -59,6 +69,7 @@ function App() {
       <LetterButton buttonText = "L"></LetterButton>
       <LetterButton buttonText = "M"></LetterButton>
       <LetterButton buttonText = "N"></LetterButton>
+      <LetterButton buttonText = "O"></LetterButton>
       <LetterButton buttonText = "P"></LetterButton>
       <LetterButton buttonText = "Q"></LetterButton>
       <LetterButton buttonText = "R"></LetterButton>
