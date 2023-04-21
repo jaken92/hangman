@@ -19,14 +19,13 @@ async function handleClick() {
   let data = await response.json();
 
   word = data.word;
-
   console.log(word);
 }
 
 //Displaying the word as a prop.
 
-function WordContainer({ value }) {
-  return <h2>{value}</h2>;
+function WordContainer() {
+  return <h2></h2>;
 }
 
 function App() {
@@ -34,7 +33,7 @@ function App() {
     <div className="App">
       <h1> Start the game</h1>
       <TestBtn onSquareClick={() => handleClick()}></TestBtn>
-      <WordContainer value={word}></WordContainer>
+      <WordContainer></WordContainer>
     </div>
   );
 }
