@@ -2,6 +2,7 @@ import { StyledButton } from './components/StartButton/Button';
 import Figure from './components/Figure';
 import Podium from './components/Podium';
 import { StyledLetterButton } from './components/Letters';
+import LetterButton from './components/Letters'
 import './App.css';
 import { useState } from 'react';
 // import styled from 'styled-components';
@@ -40,7 +41,36 @@ function App() {
       <TestBtn onSquareClick={() => handleClick()}></TestBtn>
 
       <StyledLetterButton></StyledLetterButton>
+     
+      <TestBtn onSquareClick={() => handleClick()}></TestBtn>
       <WordContainer></WordContainer>
+      <div className = "LetterContainer">
+      <LetterButton buttonText = "A"></LetterButton>
+      <LetterButton buttonText = "B"></LetterButton>
+      <LetterButton buttonText = "C"></LetterButton>
+      <LetterButton buttonText = "D"></LetterButton>
+      <LetterButton buttonText = "E"></LetterButton>
+      <LetterButton buttonText = "F"></LetterButton>
+      <LetterButton buttonText = "G"></LetterButton>
+      <LetterButton buttonText = "H"></LetterButton>
+      <LetterButton buttonText = "I"></LetterButton>
+      <LetterButton buttonText = "J"></LetterButton>
+      <LetterButton buttonText = "K"></LetterButton>
+      <LetterButton buttonText = "L"></LetterButton>
+      <LetterButton buttonText = "M"></LetterButton>
+      <LetterButton buttonText = "N"></LetterButton>
+      <LetterButton buttonText = "P"></LetterButton>
+      <LetterButton buttonText = "Q"></LetterButton>
+      <LetterButton buttonText = "R"></LetterButton>
+      <LetterButton buttonText = "S"></LetterButton>
+      <LetterButton buttonText = "T"></LetterButton>
+      <LetterButton buttonText = "U"></LetterButton>
+      <LetterButton buttonText = "V"></LetterButton>
+      <LetterButton buttonText = "W"></LetterButton>
+      <LetterButton buttonText = "X"></LetterButton>
+      <LetterButton buttonText = "Y"></LetterButton>
+      <LetterButton buttonText = "Z"></LetterButton>
+      </div>
     </div>
   );
 }

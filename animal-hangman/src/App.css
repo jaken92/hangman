@@ -7,6 +7,16 @@
   gap: 30px;
 }
 
+.LetterContainer{
+  display:flex;
+  flex-direction: row;
+  
+  gap: 10px;
+  width: 800px;
+  flex-wrap:wrap;
+ 
+}
+
 
 
 
