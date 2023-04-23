@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 
 const StyledSvg = styled.svg`
-stroke: black;
+stroke: white;
+border:black;
+margin-top: 50rem;
 `
 const StyledLine = styled.line`
 stroke-width: 8px;
@@ -12,7 +14,7 @@ stroke-width: 8px;
 const Podium = () => {
     return (
 
-        <div>
+        <div id = "podium-div">
         <StyledSvg height="250" width="200" >
         <StyledLine x1="60" y1="5" x2="180" y2="5" />
         <StyledLine x1="180" y1="0" x2="180" y2="50" />

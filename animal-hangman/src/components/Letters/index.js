@@ -8,12 +8,21 @@ import styled from 'styled-components';
   background-color: yellow;
   color: black;
   cursor: pointer;
+
+
+  &:hover {
+    box-shadow: 3px 3px 0px 0px orange;
+    background-color: orange;
+    
+
+  }
 `
 
 const LetterButton = props => {
     return (
-    
+    <div id = "letter-div">
     <StyledLetterButton className="btn">{props.buttonText}</StyledLetterButton>
+    </div>
   
     )
 
