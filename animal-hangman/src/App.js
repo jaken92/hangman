@@ -46,6 +46,8 @@ function WordContainer() {
 
 function App() {
   return (
+
+    
     <div className="App">
       <h1> HANGED MAN</h1>
       
@@ -55,7 +57,7 @@ function App() {
       <Podium></Podium>
       <WordContainer></WordContainer>
       <div className = "LetterContainer">
-      <LetterButton buttonText = "A"></LetterButton>
+      <LetterButton value = "a" buttonText = "A"></LetterButton>
       <LetterButton buttonText = "B"></LetterButton>
       <LetterButton buttonText = "C"></LetterButton>
       <LetterButton buttonText = "D"></LetterButton>
