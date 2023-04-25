@@ -1,59 +1,35 @@
 import { StyledButton } from './components/StartButton/Button';
 import Figure from './components/Figure';
 import Podium from './components/Podium';
+import { WordGenerator } from './components/WordGenerator/WordGenerator';
 
-import LetterButton from './components/Letters'
+import LetterButton from './components/Letters';
 import './App.css';
 import { useState } from 'react';
 // import styled from 'styled-components';
 
-//fetching word and console logging on click TestBtn.
-function TestBtn({ onSquareClick }) {
-  return (
-    <StyledButton className="square" onClick={onSquareClick}>
-      Start the game
-    </StyledButton>
-  );
-}
-
-let word = 'The Word';
-
-//button 
+//button
 function RedirectButton(props) {
   const handleClick = () => {
     const element = document.getElementById(props.divId);
     element.scrollIntoView({ behavior: 'smooth' });
-  }
-  return (
-    <button onClick={handleClick}>Go down on page</button>
-  );
-}
-
-
-async function handleClick() {
-  let response = await fetch('https://www.wordgamedb.com/api/v1/words/random');
-  let data = await response.json();
-
-  word = data.word;
-  console.log(word);
-}
-
-//Displaying the word as a prop.
-
-function WordContainer() {
-  return <h2></h2>;
+  };
+  return <button onClick={handleClick}>Go down on page</button>;
 }
 
 function App() {
+  // const [theWord, settheWord] = useState('Yakka');
   return (
 
     
     <div className="App">
-      <h1> HANGED MAN</h1>
-      
+      <WordGenerator></WordGenerator>
+      <h1> Start the game</h1>
+      {/* <Podium></Podium>
 
-      <TestBtn onSquareClick={() => handleClick()}></TestBtn>
-      <RedirectButton divId = "letter-div"></RedirectButton>
+      <LetterButton></LetterButton> */}
+
+      <RedirectButton divId="letter-div"></RedirectButton>
       <Podium></Podium>
       <WordContainer></WordContainer>
       <div className = "LetterContainer">
