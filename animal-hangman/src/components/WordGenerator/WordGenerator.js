@@ -26,21 +26,17 @@ export const WordGenerator = () => {
       const letterLine = createElement('div', { className: 'underline' }, '_');
       ReactDOM.render(letterLine, document.getElementById('container'));
     }
-
-    // function Greeting({ name }) {
-    //   return createElement('h1', { className: 'greeting' }, 'Hello');
-    // }
   }
   const [theWord, settheWord] = useState(word);
   const [theCategory, settheCategory] = useState(category);
   const [theLetters, settheLetters] = useState(letters);
   return (
-    <StyledWrapper id="container">
+    <StyledWrapper>
       <h1>{theWord}</h1>
       <h1>Category: {theCategory}</h1>
       <h1>Letters: {theLetters}</h1>
       <StyledButton onClick={handleClick}>Press to Start</StyledButton>
-      <StyledLetterBox></StyledLetterBox>
+      <StyledLetterBox id="container"></StyledLetterBox>
     </StyledWrapper>
   );
 };
