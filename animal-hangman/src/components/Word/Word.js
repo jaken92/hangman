@@ -6,6 +6,7 @@ import { ReactDOM } from 'react';
 
 export const Word = ({ Category, ClickThing, Word, Letters }) => {
   const theLetters = Word.split('');
+  const guesses = ['a', 'b', 'k', 'l', 'm'];
   console.log(theLetters);
   return (
     <StyledWrapper>
@@ -14,7 +15,9 @@ export const Word = ({ Category, ClickThing, Word, Letters }) => {
           console.log(i, value);
           return (
             <StyledSpan>
-              <h1 key={i}>{value}</h1>
+              <StyledSecretWord key={i} guesses={guesses} value={value}>
+                {value}
+              </StyledSecretWord>
             </StyledSpan>
           );
         })}
@@ -27,6 +30,12 @@ export const Word = ({ Category, ClickThing, Word, Letters }) => {
   );
 };
 
+const StyledSecretWord = styled.h1`
+  color: white;
+  text-transform: uppercase;
+  visibility: ${(props) =>
+    props.guesses.includes(props.value) ? 'visible' : 'hidden'};
+`;
 const StyledWordWrapper = styled.div`
   display: flex;
   gap: 15px;
