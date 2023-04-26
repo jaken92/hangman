@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import { createElement } from 'react';
 import { ReactDOM } from 'react';
 
-export const Word = ({ Category, ClickThing, Word, Letters }) => {
+export const Word = ({ Category, ClickThing, Word, GuessedLetters }) => {
   const theLetters = Word.split('');
-  const guesses = ['a', 'b', 'k', 'l', 'm'];
+
   console.log(theLetters);
   return (
     <StyledWrapper>
@@ -15,7 +15,7 @@ export const Word = ({ Category, ClickThing, Word, Letters }) => {
           console.log(i, value);
           return (
             <StyledSpan>
-              <StyledSecretWord key={i} guesses={guesses} value={value}>
+              <StyledSecretWord key={i} guesses={GuessedLetters} value={value}>
                 {value}
               </StyledSecretWord>
             </StyledSpan>
@@ -23,9 +23,7 @@ export const Word = ({ Category, ClickThing, Word, Letters }) => {
         })}
       </StyledWordWrapper>
       <h1>Category: {Category}</h1>
-      <h1>Letters: {Letters}</h1>
-      <StyledButton onClick={ClickThing}>Press to Start</StyledButton>
-      <StyledLetterBox id="container"></StyledLetterBox>
+      {/* <StyledButton onClick={ClickThing}>Press to Start</StyledButton> */}
     </StyledWrapper>
   );
 };
@@ -53,10 +51,4 @@ const StyledWrapper = styled.div`
   gap: 10px;
   text-align: center;
   align-items: center;
-`;
-
-const StyledLetterBox = styled.div`
-  background-color: azure;
-  justify-content: center;
-  display: flex;
 `;

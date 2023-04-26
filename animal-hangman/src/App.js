@@ -2,7 +2,7 @@ import { StyledButton } from './components/StartButton/Button';
 import Figure from './components/Figure';
 import Podium from './components/Podium';
 import { Word } from './components/Word/Word';
-
+import { StartButton } from './components/StartButton/Button';
 import LetterButton from './components/Letters';
 import './App.css';
 import { useState } from 'react';
@@ -31,33 +31,25 @@ function App() {
     word = data.word;
     category = data.category;
     letters = data.numLetters;
-    console.log(data);
     settheWord(word);
     settheCategory(category);
-    settheLetters(letters);
     let i;
   }
   const [theWord, settheWord] = useState(word);
   const [theCategory, settheCategory] = useState(category);
-  const [theLetters, settheLetters] = useState(letters);
-  console.log(theWord.length);
+  const guesses = ['a', 'b', 'k', 'l', 'm'];
 
   return (
     <div className="App">
+      <h1>{theWord}</h1>
+      <StartButton OnStartBtnClick={handleClick}></StartButton>
+      <RedirectButton divId="letter-div"></RedirectButton>
+      <Podium></Podium>
       <Word
         Category={theCategory}
         Word={theWord}
-        Letters={theLetters}
-        ClickThing={handleClick}
+        GuessedLetters={guesses}
       ></Word>
-      <h1> Start the game</h1>
-
-      {/* <Podium></Podium>
-
-      <LetterButton></LetterButton> */}
-      <h1>{theWord}</h1>
-      <RedirectButton divId="letter-div"></RedirectButton>
-      <Podium></Podium>
       <div className="LetterContainer">
         <LetterButton value="a" buttonText="A"></LetterButton>
         <LetterButton buttonText="B"></LetterButton>

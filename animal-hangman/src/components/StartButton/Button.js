@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const StartButton = ({ OnStartBtnClick }) => {
+  return <StyledButton onClick={OnStartBtnClick}>Start the Game</StyledButton>;
+};
+
 export const StyledButton = styled.button`
   background-color: ${(props) =>
     props.inverted === 'outline' ? '#FFF' : 'hotpink'};
@@ -12,11 +16,9 @@ export const StyledButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    box-shadow: 3px 3px 0px 0px orange;
+    box-shadow: 3px 3px 5px 0px orange;
     background-color: ${(props) =>
       props.inverted !== 'outline' ? '#FFF' : 'hotpink'};
     color: ${(props) => (props.inverted !== 'outline' ? 'hotpink' : '#FFF')};
   }
 `;
-
-
