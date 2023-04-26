@@ -1,5 +1,78 @@
 import styled from 'styled-components';
 
+
+const HEAD = styled.div `
+border-radius: 100%;
+width: 35px;
+height: 35px;
+background-color: yellow;
+position: absolute;
+left: 160px;
+top: 845px;
+`
+
+const BODY= styled.div `
+width: 8px;
+height: 80px;
+background-color: yellow;
+position: absolute;
+top:880px;
+left: 175px;
+
+`
+
+const LEFT_LEG = styled.div`
+
+width: 8px;
+height: 60px;
+background-color: yellow;
+position: absolute;
+top:950px;
+left: 160px;
+rotate: 30deg;
+`
+
+const RIGHT_LEG = styled.div`
+
+width: 8px;
+height: 60px;
+background-color: yellow;
+position: absolute;
+top:950px;
+left: 190px;
+rotate: 150deg;
+`
+
+const LEFT_ARM = styled.div`
+
+width: 8px;
+height: 50px;
+background-color: yellow;
+position: absolute;
+top:880px;
+left: 160px;
+rotate: 40deg;
+`
+
+const RIGHT_ARM = styled.div`
+
+width: 8px;
+height: 50px;
+background-color: yellow;
+position: absolute;
+top:880px;
+left: 190px;
+rotate:140deg;
+`
+
+
+
+
+const StyledContainer = styled.section`
+
+position: relative;
+
+`
 const StyledSvg = styled.svg`
   stroke: white;
   border: black;
@@ -11,14 +84,20 @@ const StyledLine = styled.line`
 
 const Podium = () => {
   return (
-    <div id="podium-div">
+    <StyledContainer>
+<HEAD></HEAD>
+<BODY></BODY>
+<LEFT_LEG></LEFT_LEG>
+<RIGHT_LEG></RIGHT_LEG>
+<LEFT_ARM></LEFT_ARM>
+<RIGHT_ARM></RIGHT_ARM>
       <StyledSvg height="250" width="200">
         <StyledLine x1="60" y1="5" x2="180" y2="5" />
         <StyledLine x1="180" y1="0" x2="180" y2="50" />
         <StyledLine x1="60" y1="0" x2="60" y2="230" />
         <StyledLine x1="0" y1="230" x2="130" y2="230" />
       </StyledSvg>
-    </div>
+   </StyledContainer>
   );
 };
 

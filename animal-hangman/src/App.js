@@ -44,6 +44,7 @@ function App() {
   const [theWord, settheWord] = useState(word);
   const [theCategory, settheCategory] = useState(category);
 
+
   const [guesses, setGuesses] = useState([]); // array storing guessed letters.
   console.log(guesses);
 
