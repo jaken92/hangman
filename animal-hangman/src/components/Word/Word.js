@@ -5,9 +5,20 @@ import { createElement } from 'react';
 import { ReactDOM } from 'react';
 
 export const Word = ({ Category, ClickThing, Word, Letters }) => {
+  const theLetters = Word.split('');
+  console.log(theLetters);
   return (
     <StyledWrapper>
-      <h1>{Word}</h1>
+      <StyledWordWrapper>
+        {theLetters.map(function (value, i) {
+          console.log(i, value);
+          return (
+            <StyledSpan>
+              <h1 key={i}>{value}</h1>
+            </StyledSpan>
+          );
+        })}
+      </StyledWordWrapper>
       <h1>Category: {Category}</h1>
       <h1>Letters: {Letters}</h1>
       <StyledButton onClick={ClickThing}>Press to Start</StyledButton>
@@ -15,6 +26,17 @@ export const Word = ({ Category, ClickThing, Word, Letters }) => {
     </StyledWrapper>
   );
 };
+
+const StyledWordWrapper = styled.div`
+  display: flex;
+  gap: 15px;
+`;
+
+const StyledSpan = styled.span`
+  border-bottom: 5px solid white;
+  color: white;
+  width: 30px;
+`;
 
 const StyledWrapper = styled.div`
   display: flex;
