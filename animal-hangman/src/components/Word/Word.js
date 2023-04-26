@@ -1,20 +1,16 @@
-import { useState } from 'react';
-import { StyledButton } from '../StartButton/Button';
 import styled from 'styled-components';
-import { createElement } from 'react';
-import { ReactDOM } from 'react';
 
-export const Word = ({ Category, ClickThing, Word, GuessedLetters }) => {
+export const Word = ({ Category, Word, GuessedLetters }) => {
   const theLetters = Word.split('');
 
-  console.log(theLetters);
+  // console.log(theLetters);
   return (
     <StyledWrapper>
       <StyledWordWrapper>
         {theLetters.map(function (value, i) {
-          console.log(i, value);
+          // console.log(i, value);
           return (
-            <StyledSpan>
+            <StyledSpan key={i}>
               <StyledSecretWord key={i} guesses={GuessedLetters} value={value}>
                 {value}
               </StyledSecretWord>
@@ -23,7 +19,6 @@ export const Word = ({ Category, ClickThing, Word, GuessedLetters }) => {
         })}
       </StyledWordWrapper>
       <h1>Category: {Category}</h1>
-      {/* <StyledButton onClick={ClickThing}>Press to Start</StyledButton> */}
     </StyledWrapper>
   );
 };
