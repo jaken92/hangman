@@ -3,8 +3,6 @@ import styled from 'styled-components';
 export const Word = ({ Category, Word, GuessedLetters }) => {
   const theLetters = Word.split('');
 
-
-  // console.log(theLetters);
   return (
     <StyledWrapper>
       <StyledWordWrapper>
