@@ -38,6 +38,9 @@ function App() {
         ...incorrectGuesses,
         event.target.value,
       ]);
+      if (incorrectGuesses.length >= 6){
+        window.alert("OVER");
+      }
     }
     if (word.includes(event.target.value)) {
       setCorrectGuesses((correctGuesses) => [
