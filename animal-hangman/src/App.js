@@ -37,17 +37,22 @@ function App() {
 
   //function for saving a clicked letter to the guesses array:
   async function handleLetterClick(event) {
-    console.log(event.target.value);
     setGuesses((guesses) => [...guesses, event.target.value]);
+
+    if (!word.includes(event.target.value)) {
+      setIncorrectGuesses((incorrectGuesses) => [
+        ...incorrectGuesses,
+        event.target.value,
+      ]);
+    }
   }
 
   const [theWord, settheWord] = useState(word);
   const [theCategory, settheCategory] = useState(category);
 
-
   const [guesses, setGuesses] = useState([]); // array storing guessed letters.
-  console.log(guesses);
-
+  const [incorrectGuesses, setIncorrectGuesses] = useState([]);
+  console.log(incorrectGuesses);
   return (
     <div className="App">
       <h1>{theWord}</h1>
