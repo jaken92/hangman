@@ -5,24 +5,16 @@ import { Word } from './components/Word/Word';
 import { StartButton } from './components/StartButton/Button';
 import LetterButton from './components/Letters';
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 // import styled from 'styled-components';
 
-//button
-function RedirectButton(props) {
-  const handleClick = () => {
-    const element = document.getElementById(props.divId);
-    element.scrollIntoView({ behavior: 'smooth' });
-  };
-  return <button onClick={handleClick}>Go down on page</button>;
-}
 
 let word = 'word';
 let category = 'pending';
 
 function App() {
   //function for getting the data from api and setting word and category.
-  async function handleClick() {
+  async function HandleClick(props) {
     let response = await fetch(
       'https://www.wordgamedb.com/api/v1/words/random'
     );
@@ -33,6 +25,8 @@ function App() {
     settheWord(word);
     settheCategory(category);
     let i;
+  
+    
   }
 
   //function for saving a clicked letter to the guesses array:
@@ -56,8 +50,8 @@ function App() {
   return (
     <div className="App">
       <h1>{theWord}</h1>
-      <StartButton OnStartBtnClick={handleClick}></StartButton>
-      <RedirectButton divId="letter-div"></RedirectButton>
+      <StartButton OnStartBtnClick={HandleClick}></StartButton>
+      {/* <RedirectButton></RedirectButton> */}
       <Podium></Podium>
       <Word
         Category={theCategory}
