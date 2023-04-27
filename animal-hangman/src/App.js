@@ -46,13 +46,13 @@ function App() {
 
   const [guesses, setGuesses] = useState([]); // array storing guessed letters.
   const [incorrectGuesses, setIncorrectGuesses] = useState([]);
-  console.log(incorrectGuesses);
+
   return (
     <div className="App">
       <h1>{theWord}</h1>
       <StartButton OnStartBtnClick={HandleClick}></StartButton>
-      {/* <RedirectButton></RedirectButton> */}
-      <Podium></Podium>
+    
+      <Podium incorrectGuessesArray={incorrectGuesses}></Podium>
       <Word
         Category={theCategory}
         Word={theWord}

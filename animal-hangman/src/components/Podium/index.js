@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 
 
+
+
 const Head = styled.div `
 border-radius: 100%;
 width: 35px;
@@ -22,7 +24,7 @@ left: 175px;
 
 `
 
-const LEFT_LEG = styled.div`
+const LeftLeg = styled.div`
 
 width: 8px;
 height: 60px;
@@ -65,10 +67,6 @@ top:880px;
 left: 190px;
 rotate:140deg;
 `
-
-
-
-
 const StyledContainer = styled.section`
 
 position: relative;
@@ -83,7 +81,10 @@ const StyledLine = styled.line`
   stroke-width: 8px;
 `;
 
-const Podium = () => {
+const Podium = ({ incorrectGuessesArray}) => {
+const bodyParts = [Head, Body, LeftArm, RightArm, LeftLeg, RightLeg ];
+const slicedBodyParts = bodyParts.slice(0, incorrectGuessesArray.length );
+console.log(slicedBodyParts);
   return (
     <StyledContainer>
 
