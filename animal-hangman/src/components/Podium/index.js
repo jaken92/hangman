@@ -77,7 +77,7 @@ position: relative;
 const StyledSvg = styled.svg`
   stroke: white;
   border: black;
-  margin-top: 50rem;
+  margin-top: 3rem;
 `;
 const StyledLine = styled.line`
   stroke-width: 8px;
@@ -86,6 +86,8 @@ const StyledLine = styled.line`
 const Podium = () => {
   return (
     <StyledContainer>
+
+ 
 
       <StyledSvg height="250" width="200">
         <StyledLine x1="60" y1="5" x2="180" y2="5" />
