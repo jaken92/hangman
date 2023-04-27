@@ -8,7 +8,6 @@ import './App.css';
 import { useState, useEffect } from 'react';
 // import styled from 'styled-components';
 
-
 let word = 'word';
 let category = 'pending';
 
@@ -24,9 +23,9 @@ function App() {
     category = data.category;
     settheWord(word);
     settheCategory(category);
+    setIncorrectGuesses([]);
+    setGuesses([]);
     let i;
-  
-    
   }
 
   //function for saving a clicked letter to the guesses array:
@@ -46,12 +45,13 @@ function App() {
 
   const [guesses, setGuesses] = useState([]); // array storing guessed letters.
   const [incorrectGuesses, setIncorrectGuesses] = useState([]);
+  console.log(incorrectGuesses);
 
   return (
     <div className="App">
       <h1>{theWord}</h1>
       <StartButton OnStartBtnClick={HandleClick}></StartButton>
-    
+
       <Podium incorrectGuessesArray={incorrectGuesses}></Podium>
       <Word
         Category={theCategory}

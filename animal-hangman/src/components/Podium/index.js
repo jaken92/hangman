@@ -81,11 +81,9 @@ const Podium = ({ incorrectGuessesArray }) => {
         <StyledLine x1="180" y1="0" x2="180" y2="50" />
         <StyledLine x1="60" y1="0" x2="60" y2="230" />
         <StyledLine x1="0" y1="230" x2="130" y2="230" />
-        <Head></Head>
-        <Body></Body>
       </StyledSvg>
-      {slicedBodyParts.map((BodyPartComponent, index) => (
-        <BodyPartComponent key={index} />
+      {slicedBodyParts.map((BodyPart, index) => (
+        <BodyPart key={index} />
       ))}
     </StyledContainer>
   );
