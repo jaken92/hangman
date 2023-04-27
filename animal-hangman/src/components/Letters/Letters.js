@@ -22,11 +22,8 @@ const LetterButton = ({ OnLetterBtnClick, buttonText, value}) => {
       <StyledLetterButton
         value={value}
         onClick={OnLetterBtnClick}
-        className="btn"
-        
+        className="btn"  
       >
-         
-        {/* {props.buttonText} */}
         {buttonText}
       </StyledLetterButton>
     </div>

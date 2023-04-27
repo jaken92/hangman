@@ -8,7 +8,7 @@ const Head = styled.div`
   position: absolute;
   left: 162px;
   top: 85px;
-`;
+`
 
 const Body = styled.div`
   width: 8px;
@@ -17,7 +17,7 @@ const Body = styled.div`
   position: absolute;
   top: 120px;
   left: 175px;
-`;
+`
 
 const LeftLeg = styled.div`
   width: 8px;
@@ -27,7 +27,7 @@ const LeftLeg = styled.div`
   top: 185px;
   left: 160px;
   rotate: 30deg;
-`;
+`
 
 const RightLeg = styled.div`
   width: 8px;
@@ -37,7 +37,7 @@ const RightLeg = styled.div`
   top: 185px;
   left: 190px;
   rotate: 150deg;
-`;
+`
 
 const LeftArm = styled.div`
   width: 8px;
@@ -47,7 +47,7 @@ const LeftArm = styled.div`
   top: 110px;
   left: 160px;
   rotate: 40deg;
-`;
+`
 
 const RightArm = styled.div`
   width: 8px;
@@ -57,18 +57,20 @@ const RightArm = styled.div`
   top: 110px;
   left: 190px;
   rotate: 140deg;
-`;
+`
+
+const RightEye = styled.div`
+
+`
+
 const StyledContainer = styled.section`
   position: relative;
-`;
+`
 const StyledSvg = styled.svg`
- 
-  stroke: white;
+stroke: white;
   border: black;
   margin-top: 3rem;
-
-
-`;
+`
 const StyledLine = styled.line`
   stroke-width: 8px;
 `;

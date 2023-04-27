@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const StartButton = ({ OnStartBtnClick, divId }) => {
-  return <StyledButton divId="letter-div" onClick={OnStartBtnClick}>Start the Game</StyledButton>;
+export const StartButton = ({ OnStartBtnClick}) => {
+  return <StyledButton onClick={OnStartBtnClick}>Start the Game</StyledButton>;
 };
 
 export const StyledButton = styled.button`
