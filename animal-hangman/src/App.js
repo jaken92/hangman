@@ -25,6 +25,7 @@ function App() {
     settheCategory(category);
     setIncorrectGuesses([]);
     setGuesses([]);
+    setCorrectGuesses([]);
     let i;
   }
 
@@ -38,6 +39,12 @@ function App() {
         event.target.value,
       ]);
     }
+    if (word.includes(event.target.value)) {
+      setCorrectGuesses((correctGuesses) => [
+        ...correctGuesses,
+        event.target.value,
+      ]);
+    }
   }
 
   const [theWord, settheWord] = useState(word);
@@ -45,6 +52,7 @@ function App() {
 
   const [guesses, setGuesses] = useState([]); // array storing guessed letters.
   const [incorrectGuesses, setIncorrectGuesses] = useState([]);
+  const [correctGuesses, setCorrectGuesses] = useState([]);
   console.log(incorrectGuesses);
 
   return (
