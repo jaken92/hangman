@@ -59,7 +59,12 @@ function App() {
     window.alert('OVER');
   }
   if (correctGuesses.length == word.length) {
-    window.alert('WoooooHOOoooooo');
+    setTimeout(function() {
+      window.alert('WoooooHOOoooooo');
+    }, "500");
+    
+   
+   
   }
 
   return (
