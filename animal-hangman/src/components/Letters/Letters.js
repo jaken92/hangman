@@ -8,20 +8,24 @@ const StyledLetterButton = styled.button`
   color: black;
   cursor: pointer;
 
+
+
   &:hover {
     box-shadow: 3px 3px 0px 0px orange;
     background-color: orange;
   }
 `;
 
-const LetterButton = ({ OnLetterBtnClick, buttonText, value }) => {
+const LetterButton = ({ OnLetterBtnClick, buttonText, value}) => {
   return (
     <div id="letter-div">
       <StyledLetterButton
         value={value}
         onClick={OnLetterBtnClick}
         className="btn"
+        
       >
+         
         {/* {props.buttonText} */}
         {buttonText}
       </StyledLetterButton>
