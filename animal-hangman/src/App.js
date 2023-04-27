@@ -1,5 +1,5 @@
 import { StyledButton } from './components/StartButton/Button';
-import Figure from './components/Figure';
+
 import Podium from './components/Podium';
 import { Word } from './components/Word/Word';
 import { StartButton } from './components/StartButton/Button';
@@ -56,7 +56,10 @@ function App() {
   console.log(incorrectGuesses);
 
   if (incorrectGuesses.length >= 6) {
-    window.alert('OVER');
+  
+    setTimeout(function() {
+      window.alert('OVER');
+    }, "500");
   }
   if (correctGuesses.length == word.length) {
     setTimeout(function() {
