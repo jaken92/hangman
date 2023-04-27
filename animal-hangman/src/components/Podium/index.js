@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 
-const HEAD = styled.div `
+
+const Head = styled.div `
 border-radius: 100%;
 width: 35px;
 height: 35px;
@@ -11,7 +12,7 @@ left: 160px;
 top: 845px;
 `
 
-const BODY= styled.div `
+const Body= styled.div `
 width: 8px;
 height: 80px;
 background-color: yellow;
@@ -32,7 +33,7 @@ left: 160px;
 rotate: 30deg;
 `
 
-const RIGHT_LEG = styled.div`
+const RightLeg = styled.div`
 
 width: 8px;
 height: 60px;
@@ -43,7 +44,7 @@ left: 190px;
 rotate: 150deg;
 `
 
-const LEFT_ARM = styled.div`
+const LeftArm= styled.div`
 
 width: 8px;
 height: 50px;
@@ -54,7 +55,7 @@ left: 160px;
 rotate: 40deg;
 `
 
-const RIGHT_ARM = styled.div`
+const RightArm = styled.div`
 
 width: 8px;
 height: 50px;
@@ -85,12 +86,7 @@ const StyledLine = styled.line`
 const Podium = () => {
   return (
     <StyledContainer>
-<HEAD></HEAD>
-<BODY></BODY>
-<LEFT_LEG></LEFT_LEG>
-<RIGHT_LEG></RIGHT_LEG>
-<LEFT_ARM></LEFT_ARM>
-<RIGHT_ARM></RIGHT_ARM>
+
       <StyledSvg height="250" width="200">
         <StyledLine x1="60" y1="5" x2="180" y2="5" />
         <StyledLine x1="180" y1="0" x2="180" y2="50" />
