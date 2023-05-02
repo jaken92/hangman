@@ -32,7 +32,7 @@ function App() {
     setCorrectGuesses([]);
     setShowGameOver();
     setShowWinning();
-    let i;
+    // let i;
   }
 
   //function for saving a clicked letter to the guesses array:
@@ -78,7 +78,7 @@ function App() {
   }, [incorrectGuesses]);
 
   useEffect(() => {
-    if (correctGuesses.length == word.length) {
+    if (correctGuesses.length === word.length) {
       setTimeout(() => {
         setShowWinning(true);
       }, 500);
@@ -103,8 +103,8 @@ function App() {
           </StyledDiv>
         )}
       </div>
-      <h3> {word}</h3>
-      <h2>PRESS TO START THE AMAZING GAME</h2>
+   
+      {/* <h2>PRESS TO START THE AMAZING GAME</h2> */}
       <StartButton OnStartBtnClick={HandleClick}></StartButton>
 
       <Podium incorrectGuessesArray={incorrectGuesses}></Podium>
