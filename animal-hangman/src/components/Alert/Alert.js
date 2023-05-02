@@ -55,6 +55,7 @@ export const WinningButton= styled.button `
   overflow: visible;
   padding: 12px 40px;
   text-align: center;
+  margin-top: 1rem;
 
 
 
