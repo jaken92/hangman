@@ -1,34 +1,12 @@
 import styled from 'styled-components';
 
-export const Word = ({ Category, TheLetters, GuessedLetters }) => {
-  return (
-    <StyledWrapper>
-      <StyledWordWrapper>
-        {TheLetters.map(function (theLetter, i) {
-          // console.log(i, value);
-          return (
-            <StyledSpan key={i}>
-              <StyledSecretWord
-                key={i}
-                guesses={GuessedLetters}
-                value={theLetter}
-              >
-                {theLetter}
-              </StyledSecretWord>
-            </StyledSpan>
-          );
-        })}
-      </StyledWordWrapper>
-      <h1>Category: {Category}</h1>
-    </StyledWrapper>
-  );
-};
-
 const StyledSecretWord = styled.h1`
   color: white;
   text-transform: uppercase;
   visibility: ${(props) =>
-    props.guesses.includes(props.value) ? 'visible' : 'hidden'};
+    props.guesses.includes(props.value) || props.reveal === true
+      ? 'visible'
+      : 'hidden'};
 `;
 const StyledWordWrapper = styled.div`
   display: flex;
@@ -48,3 +26,27 @@ const StyledWrapper = styled.div`
   text-align: center;
   align-items: center;
 `;
+
+export const Word = ({ Category, TheLetters, GuessedLetters, Reveal }) => {
+  return (
+    <StyledWrapper>
+      <StyledWordWrapper>
+        {TheLetters.map(function (theLetter, i) {
+          return (
+            <StyledSpan key={i}>
+              <StyledSecretWord
+                key={i}
+                guesses={GuessedLetters}
+                value={theLetter}
+                reveal={Reveal}
+              >
+                {theLetter}
+              </StyledSecretWord>
+            </StyledSpan>
+          );
+        })}
+      </StyledWordWrapper>
+      <h1>Category: {Category}</h1>
+    </StyledWrapper>
+  );
+};

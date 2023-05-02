@@ -117,6 +117,7 @@ function App() {
         Category={theCategory}
         TheLetters={theLetters}
         GuessedLetters={guesses}
+        Reveal={showWinning}
       ></Word>
       <div className="LetterContainer">
         <LetterButton
