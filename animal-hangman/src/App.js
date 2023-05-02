@@ -59,12 +59,9 @@ function App() {
     window.alert('OVER');
   }
   if (correctGuesses.length == word.length) {
-    setTimeout(function() {
+    setTimeout(function () {
       window.alert('WoooooHOOoooooo');
-    }, "500");
-    
-   
-   
+    }, '500');
   }
 
   return (
@@ -83,6 +80,7 @@ function App() {
           value="a"
           buttonText="A"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="b"
