@@ -11,8 +11,6 @@ import LetterButton from './components/Letters/Letters';
 import './App.css';
 import { useState, useEffect } from 'react';
 
-
-
 let word = 'word';
 let category = 'pending';
 
@@ -32,6 +30,7 @@ function App() {
     setGuesses([]);
     setCorrectGuesses([]);
     setTheLetters(word.split(''));
+    setRevealWord(false);
     // let i;
   }
 
@@ -62,6 +61,7 @@ function App() {
   const [showGameOver, setShowGameOver] = useState(false);
   const [showWinning, setShowWinning] = useState(false);
   const [theLetters, setTheLetters] = useState(word.split(''));
+  const [revealWord, setRevealWord] = useState(false);
   console.log(theLetters);
 
   function handleClose() {
@@ -75,6 +75,7 @@ function App() {
     if (incorrectGuesses.length >= 9) {
       setTimeout(() => {
         setShowGameOver(true);
+        setRevealWord(true);
       }, 500);
     }
   }, [incorrectGuesses]);
@@ -117,7 +118,7 @@ function App() {
         Category={theCategory}
         TheLetters={theLetters}
         GuessedLetters={guesses}
-        Reveal={showWinning}
+        Reveal={revealWord}
       ></Word>
       <div className="LetterContainer">
         <LetterButton
