@@ -75,7 +75,6 @@ function App() {
       setTimeout(() => {
         setShowGameOver(true);
       }, 500);
-   
     }
   }, [incorrectGuesses]);
 
@@ -114,7 +113,7 @@ function App() {
       <Podium incorrectGuessesArray={incorrectGuesses}></Podium>
       <Word
         Category={theCategory}
-        Word={theWord}
+        TheLetters={theLetters}
         GuessedLetters={guesses}
       ></Word>
       <div className="LetterContainer">

@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
-export const Word = ({ Category, Word, GuessedLetters }) => {
-  const theLetters = Word.split('');
-
+export const Word = ({ Category, TheLetters, GuessedLetters }) => {
   return (
     <StyledWrapper>
       <StyledWordWrapper>
-        {theLetters.map(function (theLetter, i) {
+        {TheLetters.map(function (theLetter, i) {
           // console.log(i, value);
           return (
             <StyledSpan key={i}>
