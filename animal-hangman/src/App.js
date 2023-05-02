@@ -32,6 +32,7 @@ function App() {
     setCorrectGuesses([]);
     setShowGameOver();
     setShowWinning();
+    setTheLetters(word.split(''));
     // let i;
   }
 
@@ -61,6 +62,8 @@ function App() {
   const [correctGuesses, setCorrectGuesses] = useState([]);
   const [showGameOver, setShowGameOver] = useState(false);
   const [showWinning, setShowWinning] = useState(false);
+  const [theLetters, setTheLetters] = useState(word.split(''));
+  console.log(theLetters);
 
   function handleClose() {
     setShowGameOver(false);
@@ -78,12 +81,12 @@ function App() {
   }, [incorrectGuesses]);
 
   useEffect(() => {
-    if (correctGuesses.length == word.length) {
+    if (theLetters.every((value) => correctGuesses.includes(value))) {
       setTimeout(() => {
         setShowWinning(true);
       }, 500);
     }
-  }, [correctGuesses]);
+  }, [correctGuesses, theLetters]);
 
   return (
     <div className="App">
@@ -104,6 +107,8 @@ function App() {
           </StyledDiv>
         )}
       </div>
+
+      {/* <h2>PRESS TO START THE AMAZING GAME</h2> */}
       <StartButton OnStartBtnClick={HandleClick}></StartButton>
 
       <Podium incorrectGuessesArray={incorrectGuesses}></Podium>

@@ -6,12 +6,16 @@ export const Word = ({ Category, Word, GuessedLetters }) => {
   return (
     <StyledWrapper>
       <StyledWordWrapper>
-        {theLetters.map(function (value, i) {
+        {theLetters.map(function (theLetter, i) {
           // console.log(i, value);
           return (
             <StyledSpan key={i}>
-              <StyledSecretWord key={i} guesses={GuessedLetters} value={value}>
-                {value}
+              <StyledSecretWord
+                key={i}
+                guesses={GuessedLetters}
+                value={theLetter}
+              >
+                {theLetter}
               </StyledSecretWord>
             </StyledSpan>
           );
