@@ -75,7 +75,6 @@ function App() {
       setTimeout(() => {
         setShowGameOver(true);
       }, 500);
-   
     }
   }, [incorrectGuesses]);
 
@@ -102,7 +101,7 @@ function App() {
         {showWinning && (
           <StyledDiv>
             <p>YOU ARE A WINNER </p>
-            
+
             <WinningButton onClick={handleClose}>Close</WinningButton>
           </StyledDiv>
         )}
@@ -114,7 +113,7 @@ function App() {
       <Podium incorrectGuessesArray={incorrectGuesses}></Podium>
       <Word
         Category={theCategory}
-        Word={theWord}
+        TheLetters={theLetters}
         GuessedLetters={guesses}
       ></Word>
       <div className="LetterContainer">
