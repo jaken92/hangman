@@ -78,7 +78,7 @@ const StyledLine = styled.line`
 const Podium = ({ incorrectGuessesArray }) => {
   const bodyParts = [Head, Body, LeftArm, RightArm, LeftLeg, RightLeg];
   const slicedBodyParts = bodyParts.slice(0, incorrectGuessesArray.length);
-  console.log(slicedBodyParts);
+  // console.log(slicedBodyParts);
   return (
     <StyledContainer>
       <StyledSvg height="250" width="200">

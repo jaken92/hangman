@@ -1,5 +1,8 @@
-
-import { StyledDiv, GameOverButton, WinningButton } from './components/Alert/Alert';
+import {
+  StyledDiv,
+  GameOverButton,
+  WinningButton,
+} from './components/Alert/Alert';
 
 import Podium from './components/Podium/Podium';
 import { Word } from './components/Word/Word';
@@ -11,10 +14,6 @@ import { useState, useEffect } from 'react';
 
 let word = 'word';
 let category = 'pending';
-
-
-
-
 
 function App() {
   //function for getting the data from api and setting word and category.
@@ -64,14 +63,11 @@ function App() {
   const [showWinning, setShowWinning] = useState(false);
 
   function handleClose() {
-      setShowGameOver(false);
-      setShowWinning(false);
-      
-    }
- 
+    setShowGameOver(false);
+    setShowWinning(false);
+  }
 
-
-  console.log(incorrectGuesses);
+  console.log(word);
 
   useEffect(() => {
     if (incorrectGuesses.length >= 6) {
@@ -80,40 +76,34 @@ function App() {
       }, 500);
     }
   }, [incorrectGuesses]);
-  
+
   useEffect(() => {
-  if (correctGuesses.length == word.length) {
-    setTimeout(() => {
-      setShowWinning(true);
-    }, 500);
-  }
-}, [correctGuesses]);
- 
- 
-    
-   
-   
-  
+    if (correctGuesses.length == word.length) {
+      setTimeout(() => {
+        setShowWinning(true);
+      }, 500);
+    }
+  }, [correctGuesses]);
 
   return (
     <div className="App">
       <div>
-      {showGameOver && (
-        <StyledDiv>
-          <p>LOSER! TRY AGAIN BUDDY</p>
-          <GameOverButton onClick={handleClose}>Close</GameOverButton>
-          </StyledDiv>  
-      )}
+        {showGameOver && (
+          <StyledDiv>
+            <p>LOSER! TRY AGAIN BUDDY</p>
+            <GameOverButton onClick={handleClose}>Close</GameOverButton>
+          </StyledDiv>
+        )}
       </div>
       <div>
-      {showWinning && (
-        <StyledDiv>
-          <p>WINNER WINNER CHICKEN DINNER</p>
-          <WinningButton onClick={handleClose}>Close</WinningButton>
-          </StyledDiv>  
-      )}
+        {showWinning && (
+          <StyledDiv>
+            <p>WINNER WINNER CHICKEN DINNER</p>
+            <WinningButton onClick={handleClose}>Close</WinningButton>
+          </StyledDiv>
+        )}
       </div>
-        <h3> {word}</h3>
+      <h3> {word}</h3>
       <h2>PRESS TO START THE AMAZING GAME</h2>
       <StartButton OnStartBtnClick={HandleClick}></StartButton>
 
@@ -129,139 +119,160 @@ function App() {
           buttonText="A"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
-         
-         
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="b"
           buttonText="B"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="c"
           buttonText="C"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="d"
           buttonText="D"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="e"
           buttonText="E"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="f"
           buttonText="F"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="g"
           buttonText="G"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="h"
           buttonText="H"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="i"
           buttonText="I"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="j"
           buttonText="J"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="k"
           buttonText="K"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="l"
           buttonText="L"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="m"
           buttonText="M"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="n"
           buttonText="N"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="o"
           buttonText="O"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="p"
           buttonText="P"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="q"
           buttonText="Q"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="r"
           buttonText="R"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="s"
           buttonText="S"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="t"
           buttonText="T"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="u"
           buttonText="U"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="v"
           buttonText="V"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="w"
           buttonText="W"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="x"
           buttonText="X"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="y"
           buttonText="Y"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
         <LetterButton
           value="z"
           buttonText="Z"
           OnLetterBtnClick={handleLetterClick}
+          GuessesArray={guesses}
         ></LetterButton>
       </div>
     </div>
-  
-
-    
   );
 }
 
