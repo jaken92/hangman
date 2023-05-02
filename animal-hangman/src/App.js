@@ -102,7 +102,7 @@ function App() {
         {showWinning && (
           <StyledDiv>
             <p>YOU ARE A WINNER </p>
-            
+
             <WinningButton onClick={handleClose}>Close</WinningButton>
           </StyledDiv>
         )}
