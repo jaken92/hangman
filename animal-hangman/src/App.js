@@ -102,7 +102,7 @@ function App() {
       <div>
         {showWinning && (
           <StyledDiv>
-            <p>YOU ARE A WINNER </p>
+            <p>YOU ARE A WINNER!!</p>
             <img src={require('./party.gif')} alt="loading..." />
 
             <WinningButton onClick={handleClose}>Close</WinningButton>
