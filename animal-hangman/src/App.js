@@ -1,15 +1,20 @@
-import { StyledButton } from './components/StartButton/Button';
-import Figure from './components/Figure';
-import Podium from './components/Podium';
+
+import { StyledDiv, GameOverButton, WinningButton } from './components/Alert/Alert';
+
+import Podium from './components/Podium/Podium';
 import { Word } from './components/Word/Word';
 import { StartButton } from './components/StartButton/Button';
-import LetterButton from './components/Letters';
+import LetterButton from './components/Letters/Letters';
 import './App.css';
 import { useState, useEffect } from 'react';
 // import styled from 'styled-components';
 
 let word = 'word';
 let category = 'pending';
+
+
+
+
 
 function App() {
   //function for getting the data from api and setting word and category.
@@ -26,6 +31,8 @@ function App() {
     setIncorrectGuesses([]);
     setGuesses([]);
     setCorrectGuesses([]);
+    setShowGameOver();
+    setShowWinning();
     let i;
   }
 
@@ -53,20 +60,61 @@ function App() {
   const [guesses, setGuesses] = useState([]); // array storing guessed letters.
   const [incorrectGuesses, setIncorrectGuesses] = useState([]);
   const [correctGuesses, setCorrectGuesses] = useState([]);
+  const [showGameOver, setShowGameOver] = useState(false);
+  const [showWinning, setShowWinning] = useState(false);
+
+  function handleClose() {
+      setShowGameOver(false);
+      setShowWinning(false);
+      
+    }
+ 
+
+
   console.log(incorrectGuesses);
 
-  if (incorrectGuesses.length >= 6) {
-    window.alert('OVER');
-  }
+  useEffect(() => {
+    if (incorrectGuesses.length >= 6) {
+      setTimeout(() => {
+        setShowGameOver(true);
+      }, 500);
+    }
+  }, [incorrectGuesses]);
+  
+  useEffect(() => {
   if (correctGuesses.length == word.length) {
-    setTimeout(function () {
-      window.alert('WoooooHOOoooooo');
-    }, '500');
+    setTimeout(() => {
+      setShowWinning(true);
+    }, 500);
   }
+}, [correctGuesses]);
+ 
+ 
+    
+   
+   
+  
 
   return (
     <div className="App">
-      <h1>{theWord}</h1>
+      <div>
+      {showGameOver && (
+        <StyledDiv>
+          <p>LOSER! TRY AGAIN BUDDY</p>
+          <GameOverButton onClick={handleClose}>Close</GameOverButton>
+          </StyledDiv>  
+      )}
+      </div>
+      <div>
+      {showWinning && (
+        <StyledDiv>
+          <p>WINNER WINNER CHICKEN DINNER</p>
+          <WinningButton onClick={handleClose}>Close</WinningButton>
+          </StyledDiv>  
+      )}
+      </div>
+        <h3> {word}</h3>
+      <h2>PRESS TO START THE AMAZING GAME</h2>
       <StartButton OnStartBtnClick={HandleClick}></StartButton>
 
       <Podium incorrectGuessesArray={incorrectGuesses}></Podium>
@@ -81,6 +129,8 @@ function App() {
           buttonText="A"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+         
+         
         ></LetterButton>
         <LetterButton
           value="b"
@@ -209,6 +259,9 @@ function App() {
         ></LetterButton>
       </div>
     </div>
+  
+
+    
   );
 }
 

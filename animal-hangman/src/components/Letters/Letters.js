@@ -35,4 +35,19 @@ const StyledLetterButton = styled.button`
     background-color: orange;
   }
 `;
+
+const LetterButton = ({ OnLetterBtnClick, buttonText, value }) => {
+  return (
+    <div id="letter-div">
+      <StyledLetterButton
+        value={value}
+        onClick={OnLetterBtnClick}
+        className="btn"
+      >
+        {buttonText}
+      </StyledLetterButton>
+    </div>
+  );
+};
+
 export default LetterButton;
