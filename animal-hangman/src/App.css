@@ -27,7 +27,7 @@ body {
 .LetterContainer {
   display: flex;
   flex-direction: row;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
   gap: 10px;
   width: 800px;
   flex-wrap: wrap;

@@ -6,12 +6,13 @@ display:flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-top: 500px;
-left:400px;
+top: 110px;
+left: 350px;
+
 width: 900px;
 height: 400px;
-background-color: hotpink;
-color:black;
+background-color: black;
+color:white;
 padding: 20;
 font-size: 40px;
 z-index: 1;
@@ -19,7 +20,7 @@ z-index: 1;
 `
 
 export const GameOverButton = styled.button `
-  background-color: #000;
+  background-color: hotpink;
   background-image: none;
   border: 1px solid #000;
   border-radius: 4px;
@@ -33,7 +34,7 @@ export const GameOverButton = styled.button `
   font-weight: 400;
   line-height: 20px;
   margin: 0 5px 10px 0;
-  overflow: visible;
+
   padding: 12px 40px;
   text-align: center;
   text-transform: none;
