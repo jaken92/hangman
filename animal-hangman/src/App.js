@@ -126,150 +126,175 @@ function App() {
           buttonText="B"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="c"
           buttonText="C"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="d"
           buttonText="D"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="e"
           buttonText="E"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="f"
           buttonText="F"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="g"
           buttonText="G"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="h"
           buttonText="H"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="i"
           buttonText="I"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="j"
           buttonText="J"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="k"
           buttonText="K"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="l"
           buttonText="L"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="m"
           buttonText="M"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="n"
           buttonText="N"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="o"
           buttonText="O"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="p"
           buttonText="P"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="q"
           buttonText="Q"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="r"
           buttonText="R"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="s"
           buttonText="S"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="t"
           buttonText="T"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="u"
           buttonText="U"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="v"
           buttonText="V"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="w"
           buttonText="W"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="x"
           buttonText="X"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="y"
           buttonText="Y"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
         <LetterButton
           value="z"
           buttonText="Z"
           OnLetterBtnClick={handleLetterClick}
           GuessesArray={guesses}
+          CorrectGuessesArray={correctGuesses}
         ></LetterButton>
       </div>
     </div>
