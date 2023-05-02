@@ -6,8 +6,8 @@ export const StartButton = ({ OnStartBtnClick}) => {
 
 export const StyledButton = styled.button`
   background-color: ${(props) =>
-    props.inverted === 'outline' ? '#FFF' : 'hotpink'};
-  color: ${(props) => (props.inverted === 'outline' ? 'hotpink' : '#FFF')};
+    props.inverted === 'outline' ? '#FFF' : 'yellow'};
+  color: ${(props) => (props.inverted === 'outline' ? 'yellow' : '#black')};
   width: 200px;
   height: 100px;
   border-radius: 5px;
@@ -20,7 +20,7 @@ export const StyledButton = styled.button`
   &:hover {
     box-shadow: 3px 3px 5px 0px orange;
     background-color: ${(props) =>
-      props.inverted !== 'outline' ? '#FFF' : 'hotpink'};
-    color: ${(props) => (props.inverted !== 'outline' ? 'hotpink' : '#FFF')};
+      props.inverted !== 'outline' ? 'orange' : 'black'};
+    color: ${(props) => (props.inverted !== 'outline' ? 'black' : 'orange')};
   }
 `;

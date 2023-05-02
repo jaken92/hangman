@@ -20,13 +20,13 @@ z-index: 1;
 `
 
 export const GameOverButton = styled.button `
-  background-color: hotpink;
+  background-color: yellow;
   background-image: none;
   border: 1px solid #000;
   border-radius: 4px;
-  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-shadow: orange 4px 4px 0 0,#000 4px 4px 0 1px;
   box-sizing: border-box;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   display: inline-block;
   font-family: Arial,sans-serif;
