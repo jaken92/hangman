@@ -10,7 +10,8 @@ import { StartButton } from './components/StartButton/Button';
 import LetterButton from './components/Letters/Letters';
 import './App.css';
 import { useState, useEffect } from 'react';
-// import styled from 'styled-components';
+
+
 
 let word = 'word';
 let category = 'pending';
@@ -101,6 +102,7 @@ function App() {
         {showWinning && (
           <StyledDiv>
             <p>YOU ARE A WINNER </p>
+            <img src={require('./party.gif')} alt="loading..." />
 
             <WinningButton onClick={handleClose}>Close</WinningButton>
           </StyledDiv>
