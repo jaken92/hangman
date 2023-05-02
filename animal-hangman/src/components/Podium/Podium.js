@@ -15,7 +15,7 @@ const Body = styled.div`
   height: 80px;
   background-color: yellow;
   position: absolute;
-  top: 100px;
+  top: 99px;
   left: 175px;
 `
 
@@ -59,9 +59,36 @@ const RightArm = styled.div`
   rotate: 140deg;
 `
 
-const RightEye = styled.div`
-
+const leftEye = styled.div `
+background-color: black;
+width: 10px;
+height: 10px;
+border-radius: 100%;
+top: 75px; 
+left:167px;
+position: absolute;
 `
+const rightEye = styled.div `
+background-color: black;
+width: 10px;
+height: 10px;
+border-radius: 100%;
+top: 75px; 
+left:183px;
+position: absolute;
+`
+
+const Mouth = styled.div `
+position: absolute;
+border-radius: 50%/100px 100px 0 0;
+background-color: black;
+width: 12px;
+height: 2px;
+top: 90px; 
+left:173px;
+`
+
+
 
 const StyledContainer = styled.section`
   position: relative;
@@ -76,7 +103,7 @@ const StyledLine = styled.line`
 `;
 
 const Podium = ({ incorrectGuessesArray }) => {
-  const bodyParts = [Head, Body, LeftArm, RightArm, LeftLeg, RightLeg];
+  const bodyParts = [Head, Body, LeftArm, RightArm, LeftLeg, RightLeg, leftEye, rightEye, Mouth];
   const slicedBodyParts = bodyParts.slice(0, incorrectGuessesArray.length);
   // console.log(slicedBodyParts);
   return (

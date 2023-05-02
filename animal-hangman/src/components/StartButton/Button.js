@@ -13,7 +13,9 @@ export const StyledButton = styled.button`
   border-radius: 5px;
   box-shadow: 10px 10px 5px orange;
   border: 2px solid black;
+  font-size: 18px;
   cursor: pointer;
+  
 
   &:hover {
     box-shadow: 3px 3px 5px 0px orange;

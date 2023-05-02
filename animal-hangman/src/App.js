@@ -70,7 +70,7 @@ function App() {
   console.log(word);
 
   useEffect(() => {
-    if (incorrectGuesses.length >= 6) {
+    if (incorrectGuesses.length >= 9) {
       setTimeout(() => {
         setShowGameOver(true);
       }, 500);
@@ -78,7 +78,7 @@ function App() {
   }, [incorrectGuesses]);
 
   useEffect(() => {
-    if (correctGuesses.length === word.length) {
+    if (correctGuesses.length == word.length) {
       setTimeout(() => {
         setShowWinning(true);
       }, 500);
@@ -98,13 +98,12 @@ function App() {
       <div>
         {showWinning && (
           <StyledDiv>
-            <p>WINNER WINNER CHICKEN DINNER</p>
+            <p>YOU ARE A WINNER </p>
+            
             <WinningButton onClick={handleClose}>Close</WinningButton>
           </StyledDiv>
         )}
       </div>
-   
-      {/* <h2>PRESS TO START THE AMAZING GAME</h2> */}
       <StartButton OnStartBtnClick={HandleClick}></StartButton>
 
       <Podium incorrectGuessesArray={incorrectGuesses}></Podium>

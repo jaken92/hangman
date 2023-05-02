@@ -7,7 +7,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 top: 110px;
-left: 350px;
+left: 355px;
 
 width: 900px;
 height: 400px;
@@ -29,27 +29,17 @@ export const GameOverButton = styled.button `
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-family: Arial,sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   margin: 0 5px 10px 0;
-
   padding: 12px 40px;
   text-align: center;
-  text-transform: none;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-
-
 `
 
 export const WinningButton= styled.button `
-  background-color: #000;
-  background-image: none;
+  background-color: hotpink;
   border: 1px solid #000;
   border-radius: 4px;
   box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
@@ -57,7 +47,7 @@ export const WinningButton= styled.button `
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-family: Arial,sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -65,12 +55,7 @@ export const WinningButton= styled.button `
   overflow: visible;
   padding: 12px 40px;
   text-align: center;
-  text-transform: none;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
+
 
 
 `
