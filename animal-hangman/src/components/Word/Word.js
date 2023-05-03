@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Word = ({ Category, TheLetters, GuessedLetters, Reveal }) => {
-  console.log(Reveal);
   return (
     <StyledWrapper>
       <StyledWordWrapper>

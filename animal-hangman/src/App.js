@@ -24,7 +24,6 @@ function App() {
 
     word = data.word;
     category = data.category;
-    settheWord(word);
     settheCategory(category);
     setIncorrectGuesses([]);
     setGuesses([]);
@@ -52,9 +51,8 @@ function App() {
     }
   }
 
-  const [theWord, settheWord] = useState(word);
+ 
   const [theCategory, settheCategory] = useState(category);
-
   const [guesses, setGuesses] = useState([]); // array storing guessed letters.
   const [incorrectGuesses, setIncorrectGuesses] = useState([]);
   const [correctGuesses, setCorrectGuesses] = useState([]);
@@ -90,14 +88,14 @@ function App() {
     'y',
     'z',
   ];
-  console.log(theLetters);
+
 
   function handleClose() {
     setShowGameOver(false);
     setShowWinning(false);
   }
 
-  console.log(word);
+ 
 
   useEffect(() => {
     if (incorrectGuesses.length >= 9) {
@@ -149,8 +147,9 @@ function App() {
         Reveal={revealWord}
       ></Word>
       <div className="LetterContainer">
-        {lettersArray.map((letter) => (
+        {lettersArray.map((letter, i) => (
           <LetterButton
+            key = {i}
             value={letter}
             buttonText={letter}
             OnLetterBtnClick={handleLetterClick}
