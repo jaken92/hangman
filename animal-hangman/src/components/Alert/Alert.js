@@ -6,8 +6,8 @@ display:flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+transform: translateX(-50%);
 top: 110px;
-left: 355px;
 
 width: 900px;
 height: 400px;

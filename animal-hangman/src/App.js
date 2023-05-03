@@ -122,7 +122,7 @@ function App() {
         {showGameOver && (
           <StyledDiv>
             <p>LOSER! TRY AGAIN BUDDY</p>
-            <p>The correct word was: {theWord}</p>
+           
             <GameOverButton onClick={handleClose}>Close</GameOverButton>
           </StyledDiv>
         )}
