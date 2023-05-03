@@ -7,6 +7,7 @@ const StyledLetterButton = styled.button`
   background-color: yellow;
   color: black;
   cursor: pointer;
+  text-transform: capitalize;
 
   &:hover {
     box-shadow: 3px 3px 0px 0px orange;
