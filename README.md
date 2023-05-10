@@ -1,3 +1,3 @@
 # Hangman
 
-First React-project by me and my classmate Emma Hedlund! 
+Our first React-project by me and my classmate Emma Hedlund! 
